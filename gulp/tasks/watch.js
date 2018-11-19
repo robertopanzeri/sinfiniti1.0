@@ -11,26 +11,21 @@ gulp.task('watch', function(){
         }
     });
 
-    watch('./app/index.html', function(){
-        //gulp.start('html');
+    gulp.watch('./app/index.html', function(){
         browserSync.reload();
     });
 
-    watch('./app/assets/styles/**/*.css', function(){
-        gulp.start('cssInject');
-    });
+    gulp.watch('./app/assets/styles/**/*.css', gulp.parallel(gulp.series('styles', 'cssInject')));
     
-    watch('./app/assets/scripts/**/*.js', function(){
-        gulp.start('scriptsRefresh');   
-    });
+    gulp.watch('./app/assets/scripts/**/*.js', gulp.parallel(gulp.series('scripts', 'scriptsRefresh')));
 
 });
 
-gulp.task('cssInject', ['styles'], function(){//[dependencies that are run before the cssInject task, in this case the task styles]
+gulp.task('cssInject', function(){
     return gulp.src('./app/temp/styles/styles.css')
         .pipe(browserSync.stream());
 });
 
-gulp.task('scriptsRefresh', ['scripts'], function(){
+gulp.task('scriptsRefresh', function(){
     browserSync.reload();
 });

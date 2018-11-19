@@ -33,31 +33,31 @@ gulp.task('beginClean', function () {
     return del(['./app/temp/sprite', './app/assets/images/sprites']);
 });
 
-gulp.task('createSprite', ['beginClean'], function () { //beginClean is a dependency, so it will be run first. When beginClean is done, then createSprite is run
+gulp.task('createSprite', function () {
     return gulp.src('./app/assets/images/icons/**/*.svg')
         .pipe(svgSprite(config))
         .pipe(gulp.dest('./app/temp/sprite/'));
 });
 
-gulp.task('createPngCopy', ['createSprite'], function () {
+gulp.task('createPngCopy', function () {
     return gulp.src('.app/temp/sprite/css/*.svg')
         .pipe(svg2png())
         .pipe(gulp.dest('./app/temp/sprite/css'));
 });
 
-gulp.task('copySpriteGraphic', ['createPngCopy'], function () { //createPngCopy is a dependency, so it will be run first. When createSprite is done, then copySpriteGraphic is run
+gulp.task('copySpriteGraphic', function () {
     return gulp.src('./app/temp/sprite/css/**/*.{svg, png}')
         .pipe(gulp.dest('./app/assets/images/sprites'));
 });
 
-gulp.task('copySpriteCSS', ['createSprite'], function () { //createSprite is a dependency, so it will be run first. When createSprite is done, then copySpriteCSS is run
+gulp.task('copySpriteCSS', function () {
     return gulp.src('./app/temp/sprite/css/*.css')
         .pipe(rename('_sprite.css'))
         .pipe(gulp.dest('./app/assets/styles/modules'));
 });
 
-gulp.task('endClean', ['copySpriteGraphic', 'copySpriteCSS'], function () { //copySpriteGraphic and copySpriteCSS are dependencies, so they will be run first. When they are done, then endClean is run
+gulp.task('endClean', function () {
     return del('./app/temp/sprite');
 });
 
-gulp.task('icons', ['beginClean', 'createSprite', 'createPngCopy', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
+gulp.task('icons', gulp.series('beginClean', 'createSprite', gulp.parallel(gulp.series('createPngCopy', 'copySpriteGraphic'), 'copySpriteCSS'), 'endClean'));
