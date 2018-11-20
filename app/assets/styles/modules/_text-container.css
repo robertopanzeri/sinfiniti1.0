@@ -1,0 +1,15 @@
+.text-container {
+
+    /*Non BEM compliant to avoid setting a class on each paragraph, especially for content provided by a publishing system*/
+    p {
+        line-height: 1.6;
+        margin: 0 0 2rem 0;
+    }
+
+    &__text-highlight {
+        @mixin font-stack-subsection;
+        font-size: 1.25rem;
+        color: $red;
+        line-height: 1;
+    }
+}

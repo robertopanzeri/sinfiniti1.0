@@ -2,8 +2,9 @@
     box-sizing: border-box;
 }
 body{
-    font-family: sans-serif;
-    color: #333;
+    @mixin font-stack-body;
+    color: $gray;
+    background-color: $sand;
 }
 img {
     max-width: 100%;

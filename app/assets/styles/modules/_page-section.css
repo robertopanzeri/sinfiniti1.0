@@ -1,10 +1,42 @@
 .page-section {
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 2rem 1.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0 2rem;
+    background-color: $white;
+    border: 1px solid $darkSand;
+    margin-bottom: 2rem;
 
     @mixin atLarge {
-        padding: 0 3.25rem 1.5rem;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 3.25rem;
+        box-shadow: 4px 4px 8px -4px rgba($gray, .65);
+        /*box-shadow: h-offset v-offset (blur spread color inset)*/
+        border-bottom: none;
+        border-right: none;
+    }
+
+    &__title {
+        @mixin font-stack-title;
+        background-color: $red;
+        color: $white;
+        margin: 0 0 1rem;
+        text-align: right;
+        padding: 1rem 1rem 0 0;
+        line-height: 0.7;
+    }
+
+    &__headline {
+        @mixin font-stack-headline;
+        color: $lightGray;
+        text-align: right;
+        margin: 0 0 2rem;
+        padding: 0 1rem 0 0;
+        line-height: 1;
+
+        &--small {
+            font-size: 48%;
+        }
     }
 }
