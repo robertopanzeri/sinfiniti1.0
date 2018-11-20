@@ -10,5 +10,5 @@ img {
     height: auto;
 }
 a {
-    color: $somecolor; /*It won't be the browser default blue anyway, so it makes sense to define it globally*/
+    color: $blue; /*It won't be the browser default blue anyway, so it makes sense to define it globally*/
 }

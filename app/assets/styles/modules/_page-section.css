@@ -1,0 +1,10 @@
+.page-section {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2rem 1.5rem;
+
+    @mixin atLarge {
+        padding: 0 3.25rem 1.5rem;
+    }
+}
