@@ -1,0 +1,20 @@
+.team-member {
+    margin-bottom: 1.5rem;
+
+    @mixin atLarge {
+        margin-bottom: .65rem;
+    }
+
+    &__photo {
+        border-radius: 40px;
+        overflow: hidden;
+        width: 80px;
+        height: 80px;
+        margin-bottom: .5rem;
+
+        @mixin atLarge {
+            margin-bottom: 0;
+            margin-right: 1rem;
+        }
+    }
+}

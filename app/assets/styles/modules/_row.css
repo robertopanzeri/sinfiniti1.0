@@ -18,6 +18,20 @@
 
 
     &__column {
+        &--h-align-end {
+            display: flex;
+            justify-content: center;
+
+            @mixin atLarge {
+                justify-content: flex-end;
+            }
+        }
+
+        &--v-align-center {
+            display: flex;
+            align-items: center;
+        }
+
         &--at-large-only {
             display: none;
         }

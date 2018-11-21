@@ -28,26 +28,41 @@
     font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
-    
+
     @mixin atLarge {
         font-size: 1.5rem;
     }
 }
 
 @define-mixin atSmall {
-    @media (min-width: 530px) {
+    @media (max-width: 39.9375em) {
         @mixin-content;
     }
 }
 
 @define-mixin atMedium {
-    @media (min-width: 800px) {
+    @media (min-width: 40em) {
         @mixin-content;
     }
 }
 
 @define-mixin atLarge {
-    @media (min-width: 1010px) {
+    @media (min-width: 64em) {
         @mixin-content;
     }
 }
+
+/* Small only
+@media screen and (max-width: 39.9375em) {}
+
+/* Medium and up
+@media screen and (min-width: 40em) {}
+
+/* Medium only
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up
+@media screen and (min-width: 64em) {}
+
+/* Large only
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {} */

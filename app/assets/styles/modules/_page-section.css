@@ -15,6 +15,10 @@
         border-bottom: none;
         border-right: none;
         padding: 0 2rem 1rem;
+
+        &--b-padding-large {
+            padding-bottom: 2rem;
+        }
     }
 
     &__title {
@@ -22,17 +26,18 @@
         background-color: $red;
         color: $white;
         margin: 0 0 1rem;
-        text-align: right;
-        padding: .2rem .2rem 0 0;
+        padding: .2rem 0 0 1rem;
         line-height: 0.75;
 
         @mixin atLarge {
             line-height: 0.65;
             padding: .75rem 1rem 0 0;
+            text-align: right;
         }
 
         &--no-b-margin-until-large {
             margin: 0;
+
             @mixin atLarge {
                 margin: 0 0 1rem;
             }
