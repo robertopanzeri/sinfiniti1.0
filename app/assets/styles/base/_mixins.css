@@ -2,6 +2,7 @@
     font-family: 'PT Sans', sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
+
     @mixin atLarge {
         font-size: 0.9375rem;
     }
@@ -11,6 +12,7 @@
     font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 1.125rem;
     font-weight: 700;
+
     @mixin atLarge {
         font-size: 1.75rem;
     }
@@ -26,6 +28,7 @@
     font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
+    
     @mixin atLarge {
         font-size: 1.5rem;
     }

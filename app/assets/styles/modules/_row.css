@@ -9,14 +9,13 @@
     }
 
     &--no-left-section-padding {
-        margin-left: -2rem;
-    }
+        margin-left: -1rem;
 
-    @mixin atLarge {
-        &--no-left-section-padding {
+        @mixin atLarge {
             margin-left: 0;
         }
     }
+
 
     &__column {
         &--at-large-only {
@@ -34,6 +33,10 @@
 
             &--large-16 {
                 grid-column: auto / span 16;
+            }
+
+            &--large-offset-9 {
+                grid-column-start: col-start 9;
             }
 
             &--no-left-gutter {
