@@ -1,13 +1,19 @@
 @define-mixin font-stack-body {
     font-family: 'PT Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 400;
+    @mixin atLarge {
+        font-size: 0.9375rem;
+    }
 }
 
 @define-mixin font-stack-title {
     font-family: 'Ubuntu Condensed', sans-serif;
-    font-size: 1.75rem;
+    font-size: 1.125rem;
     font-weight: 700;
+    @mixin atLarge {
+        font-size: 1.75rem;
+    }
 }
 
 @define-mixin font-stack-headline {
@@ -18,8 +24,11 @@
 
 @define-mixin font-stack-subsection {
     font-family: 'Ubuntu Condensed', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1.25rem;
+    font-weight: 700;
+    @mixin atLarge {
+        font-size: 1.5rem;
+    }
 }
 
 @define-mixin atSmall {

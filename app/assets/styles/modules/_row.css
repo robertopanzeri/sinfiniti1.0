@@ -8,16 +8,26 @@
         grid-column: col-start / span 24;
     }
 
+    &--no-left-section-padding {
+        margin-left: -2rem;
+    }
+
+    @mixin atLarge {
+        &--no-left-section-padding {
+            margin-left: 0;
+        }
+    }
+
     &__column {
         &--at-large-only {
             display: none;
         }
 
-        &--small-8 {
-            grid-column: auto / span 8;
+        &--small-10 {
+            grid-column: auto / span 10;
         }
 
-        @mixin atMedium {
+        @mixin atLarge {
             &--large-8 {
                 grid-column: auto / span 8;
             }

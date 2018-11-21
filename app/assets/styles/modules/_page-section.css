@@ -1,15 +1,15 @@
 .page-section {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 20px);
     padding: 0 2rem;
     background-color: $white;
     border: 1px solid $darkSand;
     margin-bottom: 2rem;
 
     @mixin atLarge {
+        width: 100%;
         max-width: 960px;
-        margin-left: auto;
-        margin-right: auto;
         padding: 0 3.25rem;
         box-shadow: 4px 4px 8px -4px rgba($gray, .65);
         /*box-shadow: h-offset v-offset (blur spread color inset)*/
@@ -23,8 +23,12 @@
         color: $white;
         margin: 0 0 1rem;
         text-align: right;
-        padding: 1rem 1rem 0 0;
-        line-height: 0.7;
+        padding: .2rem .2rem 0 0;
+        line-height: 0.75;
+        @mixin atLarge {
+            line-height: 0.65;
+            padding: .75rem 1rem 0 0;
+        }
     }
 
     &__headline {
