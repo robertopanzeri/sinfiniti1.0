@@ -3,6 +3,15 @@
 
     &--side-padding {
         padding: 0 1rem;
+
+        @mixin atLarge {
+            padding: 0;
+        }
+    }
+
+    &--t-b-margin {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     /*Non BEM compliant to avoid setting a class on each paragraph, especially for content provided by a publishing system*/
@@ -66,10 +75,18 @@
             line-height: 1.6;
 
             &::before {
+                content: ">";
                 position: absolute;
                 top: 0;
                 left: 0;
-                content: ">";
+            }
+        }
+
+        &.no-bullet li {
+            padding-left: 0;
+
+            &::before {
+                content: "";
             }
         }
     }
@@ -88,6 +105,14 @@
         &:hover,
         &:focus {
             text-decoration: underline;
+        }
+
+        &.text-large {
+            font-size: 1rem;
+
+            &::after {
+                line-height: 1.3;
+            }
         }
     }
 }

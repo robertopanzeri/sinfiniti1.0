@@ -18,24 +18,6 @@
 
 
     &__column {
-        &--h-align-end {
-            display: flex;
-            justify-content: center;
-
-            @mixin atLarge {
-                justify-content: flex-end;
-            }
-        }
-
-        &--v-align-center {
-            display: flex;
-            align-items: center;
-        }
-
-        &--at-large-only {
-            display: none;
-        }
-
         &--small-10 {
             grid-column: auto / span 10;
         }
@@ -56,10 +38,36 @@
             &--no-left-gutter {
                 margin-left: -1.5%;
             }
+        }
 
-            &--at-large-only {
+        &--at-large-only {
+            display: none;
+
+            @mixin atLarge {
                 display: block;
             }
+        }
+
+        &--h-align-end {
+            display: flex;
+            justify-content: center;
+
+            @mixin atLarge {
+                justify-content: flex-end;
+            }
+        }
+
+        &--v-align-center {
+            display: flex;
+            align-items: center;
+        }
+
+        &--text-center {
+            text-align: center;
+        }
+
+        &--t-padding {
+            padding-top: 1rem;
         }
     }
 }
