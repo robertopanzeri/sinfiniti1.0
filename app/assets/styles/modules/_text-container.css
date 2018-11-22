@@ -1,0 +1,122 @@
+.text-container {
+    width: 100%;
+
+    &--side-padding {
+        padding: 0 1rem;
+
+        @mixin atLarge {
+            padding: 0;
+        }
+    }
+
+    &--t-b-margin {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    /*Non BEM compliant to avoid setting a class on each paragraph, especially for content provided by a publishing system*/
+    p {
+        @mixin font-stack-body;
+        line-height: 1.3;
+        margin: 0 0 1.5rem 0;
+
+        @mixin atLarge {
+            margin: 0 0 2rem 0;
+        }
+
+        &.b-margin-small {
+            margin-bottom: .75rem;
+        }
+
+        &.no-b-margin {
+            margin-bottom: 0;
+        }
+
+        &.text-center-at-small {
+            text-align: center;
+
+            @mixin atLarge {
+                text-align: left;
+            }
+        }
+
+        &.line-height-tall {
+            line-height: 1.6;
+        }
+
+        &>.text-title {
+            @mixin font-stack-subsection;
+            color: $red;
+            line-height: 1;
+            font-size: 1rem;
+
+            @mixin atLarge {
+                font-size: 1.25rem;
+            }
+        }
+
+        &>.text-highlight {
+            color: $red;
+        }
+    }
+
+    ul {
+        padding: 0;
+        margin: 0 0 1rem 1rem;
+
+        @mixin atLarge {
+            margin: 0 0 1.5rem 0;
+        }
+
+        &.no-b-margin {
+            margin-bottom: 0;
+        }
+
+        & li {
+            list-style: none;
+            position: relative;
+            padding-left: 1rem;
+            line-height: 1.6;
+
+            &::before {
+                content: ">";
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &.no-bullet li {
+            padding-left: 0;
+
+            &::before {
+                content: "";
+            }
+        }
+    }
+
+    a {
+        padding-right: 1rem;
+        position: relative;
+/*
+        &::after {
+            content: ">";
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+*/
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+
+        &.text-large {
+            font-size: 1rem;
+/*
+            &::after {
+                line-height: 1.3;
+            }
+*/        }
+    }
+}

@@ -1,0 +1,74 @@
+.page-section {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 20px);
+    padding: 0 1rem .5rem;
+    background-color: $white;
+    border: 1px solid $darkSand;
+    margin-bottom: 2rem;
+
+    @mixin atLarge {
+        width: 100%;
+        max-width: 960px;
+        box-shadow: 4px 4px 8px -4px rgba($gray, .65);
+        /*box-shadow: h-offset v-offset (blur spread color inset)*/
+        border-bottom: none;
+        border-right: none;
+        padding: 0 2rem 1rem;
+
+        &--b-padding-large {
+            padding-bottom: 2rem;
+        }
+    }
+
+    &__title {
+        @mixin font-stack-title;
+        background-color: $red;
+        color: $white;
+        margin: 0 0 1rem;
+        padding: .2rem 0 0 1rem;
+        line-height: 0.75;
+
+        @mixin atLarge {
+            line-height: 0.65;
+            padding: .75rem 1rem 0 0;
+            text-align: right;
+        }
+
+        &--no-b-margin-until-large {
+            margin: 0;
+
+            @mixin atLarge {
+                margin: 0 0 1rem;
+            }
+        }
+    }
+
+    &__headline {
+        @mixin font-stack-headline;
+        color: $lightGray;
+        text-align: right;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+
+        @mixin atLarge {
+            margin: 0 0 1rem;
+            padding: 0 1rem 0 0;
+        }
+
+        &--small {
+            font-size: 48%;
+        }
+    }
+
+    &__subsection-title {
+        @mixin font-stack-subsection;
+        color: $red;
+        margin: .75rem 0 0.25rem;
+
+        @mixin atLarge {
+            margin: 1.2rem 0 0.25rem;
+        }
+    }
+}

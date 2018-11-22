@@ -1,0 +1,73 @@
+.row {
+    /* .cssgrid: modernizr class for css grid feature */
+    display: grid;
+    grid-template-columns: repeat(24, [col-start] 1fr);
+    column-gap: 1%;
+
+    >* {
+        grid-column: col-start / span 24;
+    }
+
+    &--no-left-section-padding {
+        margin-left: -1rem;
+
+        @mixin atLarge {
+            margin-left: 0;
+        }
+    }
+
+
+    &__column {
+        &--small-10 {
+            grid-column: auto / span 10;
+        }
+
+        @mixin atLarge {
+            &--large-8 {
+                grid-column: auto / span 8;
+            }
+
+            &--large-16 {
+                grid-column: auto / span 16;
+            }
+
+            &--large-offset-9 {
+                grid-column-start: col-start 9;
+            }
+
+            &--no-left-gutter {
+                margin-left: -1.5%;
+            }
+        }
+
+        &--at-large-only {
+            display: none;
+
+            @mixin atLarge {
+                display: block;
+            }
+        }
+
+        &--h-align-end {
+            display: flex;
+            justify-content: center;
+
+            @mixin atLarge {
+                justify-content: flex-end;
+            }
+        }
+
+        &--v-align-center {
+            display: flex;
+            align-items: center;
+        }
+
+        &--text-center {
+            text-align: center;
+        }
+
+        &--t-padding {
+            padding-top: 1rem;
+        }
+    }
+}

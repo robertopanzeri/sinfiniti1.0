@@ -12,5 +12,6 @@
         width: {{width.outer}}px;
         height: {{height.outer}}px;
         background-position: {{position.relative.xy}};
+        display: inline-block;
     }
 {{/shapes}}
