@@ -1,0 +1,12 @@
+.site-header {
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 20px);
+    background-color: $white;
+
+    @mixin atLarge {
+        width: 100%;
+        max-width: 960px;
+        padding: 1rem 1.5rem .5rem;
+    }
+}

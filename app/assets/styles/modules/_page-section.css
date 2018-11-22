@@ -14,7 +14,7 @@
         /*box-shadow: h-offset v-offset (blur spread color inset)*/
         border-bottom: none;
         border-right: none;
-        padding: 0 2rem 1rem;
+        padding: 0 3.125rem 1rem;
 
         &--b-padding-large {
             padding-bottom: 2rem;
