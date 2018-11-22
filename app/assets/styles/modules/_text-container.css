@@ -40,6 +40,10 @@
             }
         }
 
+        &.line-height-tall {
+            line-height: 1.6;
+        }
+
         &>.text-title {
             @mixin font-stack-subsection;
             color: $red;
@@ -94,14 +98,14 @@
     a {
         padding-right: 1rem;
         position: relative;
-
+/*
         &::after {
             content: ">";
             position: absolute;
             top: 0;
             right: 0;
         }
-
+*/
         &:hover,
         &:focus {
             text-decoration: underline;
@@ -109,10 +113,10 @@
 
         &.text-large {
             font-size: 1rem;
-
+/*
             &::after {
                 line-height: 1.3;
             }
-        }
+*/        }
     }
 }
