@@ -8,6 +8,16 @@
     }
 }
 
+@define-mixin font-stack-hero-title {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+
+    @mixin atLarge {
+        font-size: 2.5rem;
+    }
+}
+
 @define-mixin font-stack-title {
     font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 1.125rem;
