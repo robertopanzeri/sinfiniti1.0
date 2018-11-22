@@ -1,0 +1,10 @@
+.site-hero {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    @mixin atLarge {
+        max-width: 960px;
+    }
+
+}
