@@ -12,13 +12,13 @@ gulp.task('previewDist', function() {
     browserSync.init ({
         notify: false,//hide notification label on the browser about browserSync actions
         server: {
-            baseDir: "dist"
+            baseDir: "docs"
         }
     });
 });
 
 gulp.task('deleteDistFolder', gulp.series('icons'), function () {
-    return del('./dist');
+    return del('./docs');
 });
 
 gulp.task('copyGeneralFiles', function() {// other files needed, not part of my app (e.g. Wordpress files)
@@ -32,7 +32,7 @@ gulp.task('copyGeneralFiles', function() {// other files needed, not part of my 
         '!./app/temp'
     ]
     return gulp.src(pathsToCopy)
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./docs'));
 });
 
 gulp.task('optimizeImages', function() {
@@ -42,7 +42,7 @@ gulp.task('optimizeImages', function() {
         interlaced: true,
         multipass: true
     }))
-    .pipe(gulp.dest('./dist/assets/images'));
+    .pipe(gulp.dest('./docs/assets/images'));
 });
 /*
 gulp.task('useminTrigger', function() {
@@ -55,7 +55,7 @@ gulp.task('usemin', gulp.series('styles', 'scripts'), function () {
         css: [function() {return rev()}, function() {return cssnano()}],
         js: [function() {return rev()}, function() {return uglify()}]
     }))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./docs'));
 });
 
 gulp.task('build', gulp.series('deleteDistFolder', gulp.parallel('copyGeneralFiles', 'optimizeImages', 'usemin')));
