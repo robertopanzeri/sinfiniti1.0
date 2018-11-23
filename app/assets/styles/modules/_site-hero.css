@@ -1,0 +1,79 @@
+.site-hero {
+    margin: 0 auto -1px;
+    width: 100%;
+    position: relative;
+
+    @mixin atLarge {
+        max-width: 960px;
+    }
+
+    &__image {
+        display: block;
+    }
+
+    &__text-content {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__title {
+        @mixin font-stack-hero-title;
+        font-size: 1.375rem;
+        color: $white;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, .5);
+        margin-bottom: 0;
+
+        @mixin atMedium {
+            font-size: 2.5rem;
+            margin-bottom: .67rem;
+        }
+
+        &__highlight {
+            display: inline-block;
+            background-color: $red;
+            text-align: right;
+            font-size: 1.625rem;
+            line-height: 0.77;
+            padding: .5rem 0 0 1.75rem;
+
+            @mixin atMedium {
+                font-size: 3.5rem;
+                width: 34.6%;
+                padding: 1rem .5rem 0 0;
+            }
+        }
+
+        &__normal {
+            display: block;
+            margin-left: 1.75rem;
+
+            @mixin atMedium {
+                display: inline;
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__description {
+        @mixin font-stack-headline;
+        font-size: 1.1875rem;
+        color: $white;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, .5);
+        line-height: 1.2;
+        max-width: 10.5rem;
+        margin-bottom: 0;
+        margin-left: 1.75rem;
+        margin-top: .8rem;
+
+        @mixin atMedium {
+            font-size: 1.625rem;
+            margin-left: 19.5%;
+            max-width: 19rem;
+            line-height: 1.3;
+            margin-top: 1.1875rem;
+        }
+    }
+}

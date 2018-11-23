@@ -9,7 +9,7 @@
     background-color: $white;
     overflow: hidden;
 
-    @mixin atLarge {
+    @mixin atMedium {
         padding: 1rem 1.5rem .5rem;
         max-width: 960px;
     }
@@ -20,7 +20,7 @@
         transition: transform .3s ease-out;
         margin-bottom: -1rem;
 
-        @mixin atLarge {
+        @mixin atMedium {
             transform: scale(1);
             margin-bottom: 0;
         }

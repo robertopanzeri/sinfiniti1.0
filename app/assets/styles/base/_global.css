@@ -1,16 +1,20 @@
 * {
     box-sizing: border-box;
 }
-body{
+
+body {
     @mixin font-stack-body;
     color: $gray;
     background-color: $sand;
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
-a {/*It won't be the browser default style anyway, so it makes sense to define it globally*/
+
+a {
+    /*It won't be the browser default style anyway, so it makes sense to define it globally*/
     color: $blue;
     text-decoration: none;
 }
