@@ -1,6 +1,7 @@
 var path = require('path'); //no need to install path, it's already part of Node
 
 module.exports = {
+    mode: "production",
     entry: {
         App: "./app/assets/scripts/app.js",
         Vendor: "./app/assets/scripts/vendor.js"
@@ -10,13 +11,19 @@ module.exports = {
         filename: "[name].js"
     },
     module: {
-        loaders: [{
+        rules: [{
+            test: /\.jsx?$/, //apply it just to js files
+            exclude: /node_modules/, //exclude libraries, just apply webpack to my own code
             loader: 'babel-loader',
-            query: {
-                presets: ['es2015']
-            },
-            test: /\.js$/, //apply it just to js files
-            exclude: /node_modules/ //exclude libraries, just apply webpack to my own code
+            options: {
+                presets: ['env']
+                /*["env", {
+                    "targets": {
+                      // The % refers to the global coverage of users from browserslist
+                      "browsers": [ ">0.25%", "not ie 11", "not op_mini all"]
+                    }
+                  }]*/
+            }
         }]
     }
 };

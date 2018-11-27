@@ -17,7 +17,7 @@ gulp.task('previewDist', function() {
     });
 });
 
-gulp.task('deleteDistFolder', gulp.series('icons'), function () {
+gulp.task('deleteDistFolder', function () {
     return del('./docs');
 });
 
@@ -44,12 +44,8 @@ gulp.task('optimizeImages', function() {
     }))
     .pipe(gulp.dest('./docs/assets/images'));
 });
-/*
-gulp.task('useminTrigger', function() {
-    gulp.start('usemin');
-});
-*/
-gulp.task('usemin', gulp.series('styles', 'scripts'), function () {
+
+gulp.task('usemin', function () {
     return gulp.src('./app/index.html')
     .pipe(usemin({
         css: [function() {return rev()}, function() {return cssnano()}],
@@ -58,4 +54,4 @@ gulp.task('usemin', gulp.series('styles', 'scripts'), function () {
     .pipe(gulp.dest('./docs'));
 });
 
-gulp.task('build', gulp.series('deleteDistFolder', gulp.parallel('copyGeneralFiles', 'optimizeImages', 'usemin')));
+gulp.task('build', gulp.series('icons', 'deleteDistFolder', gulp.parallel('copyGeneralFiles', 'optimizeImages', gulp.series('styles', gulp.series('modernizr', 'scripts'), 'usemin'))));
