@@ -1,11 +1,13 @@
+/* autoprefixer grid: off */
 .row {
-    /* .cssgrid: modernizr class for css grid feature */
     display: grid;
     grid-template-columns: repeat(24, [col-start] 1fr);
     column-gap: 1%;
 
+    /* autoprefixer grid: off */
     >* {
-        grid-column: col-start / span 24;
+        grid-column-start: col-start;
+        grid-column-end: span 24;
     }
 
     &--no-left-section-padding {
@@ -17,18 +19,24 @@
     }
 
 
+    /* autoprefixer grid: off */
     &__column {
+
         &--small-10 {
-            grid-column: auto / span 10;
+            grid-column-start: auto;
+            grid-column-end: span 10;
         }
 
         @mixin atLarge {
+
             &--large-8 {
-                grid-column: auto / span 8;
+                grid-column-start: auto;
+                grid-column-end: span 8;
             }
 
             &--large-16 {
-                grid-column: auto / span 16;
+                grid-column-start: auto;
+                grid-column-end: span 16;
             }
 
             &--large-offset-9 {
