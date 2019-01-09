@@ -1,0 +1,9 @@
+.wrapper {
+    margin: 0 auto -1px;
+    width: calc(100% - 16px);
+    position: relative;
+
+    @mixin atLarge {
+        max-width: 960px;
+    }
+}
