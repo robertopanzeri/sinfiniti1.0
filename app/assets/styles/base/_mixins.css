@@ -1,3 +1,48 @@
+@define-mixin atSmallest {
+    @media (min-width: 22.5em) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atSmaller {
+    @media (min-width: 23.4375em) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atSmall {
+    @media (min-width: 26.5625em) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atMedium {
+    @media (min-width: 40em) {
+        @mixin-content;
+    }
+}
+
+@define-mixin atLarge {
+    @media (min-width: 64em) {
+        @mixin-content;
+    }
+}
+
+/* Small only
+@media screen and (max-width: 39.9375em) {}
+
+/* Medium and up
+@media screen and (min-width: 40em) {}
+
+/* Medium only
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up
+@media screen and (min-width: 64em) {}
+
+/* Large only
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {} */
+
 @define-mixin font-stack-body {
     font-family: 'PT Sans', sans-serif;
     font-size: 0.875rem;
@@ -43,36 +88,3 @@
         font-size: 1.5rem;
     }
 }
-
-@define-mixin atSmall {
-    @media (max-width: 39.9375em) {
-        @mixin-content;
-    }
-}
-
-@define-mixin atMedium {
-    @media (min-width: 40em) {
-        @mixin-content;
-    }
-}
-
-@define-mixin atLarge {
-    @media (min-width: 64em) {
-        @mixin-content;
-    }
-}
-
-/* Small only
-@media screen and (max-width: 39.9375em) {}
-
-/* Medium and up
-@media screen and (min-width: 40em) {}
-
-/* Medium only
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
-
-/* Large and up
-@media screen and (min-width: 64em) {}
-
-/* Large only
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {} */

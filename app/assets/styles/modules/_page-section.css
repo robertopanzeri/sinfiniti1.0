@@ -1,7 +1,7 @@
 .page-section {
     margin-left: auto;
     margin-right: auto;
-    width: calc(100% - 20px);
+    width: calc(100% - 16px);
     padding: 0 1rem .5rem;
     background-color: $white;
     border: 1px solid $darkSand;
@@ -21,6 +21,10 @@
         }
     }
 
+    &--no-t-border {
+        border-top: none;
+    }
+
     &__title {
         @mixin font-stack-title;
         background-color: $red;
@@ -30,7 +34,7 @@
         line-height: 0.75;
 
         @mixin atLarge {
-            line-height: 0.65;
+            line-height: 0.7;
             padding: .75rem 1rem 0 0;
             text-align: right;
         }
