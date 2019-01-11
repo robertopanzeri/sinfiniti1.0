@@ -1,0 +1,14 @@
+.site-footer {
+    @mixin font-stack-footer;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 16px);
+    padding: 0 1rem .5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    @mixin atLarge {
+        width: 100%;
+        max-width: 960px;
+    }
+}
