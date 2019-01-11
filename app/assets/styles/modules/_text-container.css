@@ -17,7 +17,7 @@
     /*Non BEM compliant to avoid setting a class on each paragraph, especially for content provided by a publishing system*/
     p {
         @mixin font-stack-body;
-        line-height: 1.3;
+        line-height: 1.4;
         margin: 0 0 1.5rem 0;
 
         @mixin atLarge {
