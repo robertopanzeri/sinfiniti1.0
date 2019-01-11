@@ -1,6 +1,14 @@
 .site-hero {
-    background: url('../../assets/images/hero-small.png') top center no-repeat;
-    background-size: cover;
+    &.lazyloaded {
+        background: url('../../assets/images/hero-small.png') top center no-repeat;
+        background-size: cover;
+
+        @mixin atLarge {
+            background: url('../../assets/images/hero-large.png') top center no-repeat;
+            background-size: cover;
+        }
+    }
+
     height: 246px;
     padding: 2.3rem 0 0;
 
@@ -25,7 +33,6 @@
     }
 
     @mixin atLarge {
-        background: url('../../assets/images/hero-large.png') top center no-repeat;
         height: 586px;
         padding: 11.4rem 0 0;
     }

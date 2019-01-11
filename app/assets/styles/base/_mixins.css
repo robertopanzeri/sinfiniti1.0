@@ -1,47 +1,32 @@
 @define-mixin atSmallest {
-    @media (min-width: 22.5em) {
+    @media (min-width: 22.5em) {/*360px*/
         @mixin-content;
     }
 }
 
 @define-mixin atSmaller {
-    @media (min-width: 23.4375em) {
+    @media (min-width: 23.4375em) {/*375px*/
         @mixin-content;
     }
 }
 
 @define-mixin atSmall {
-    @media (min-width: 26.5625em) {
+    @media (min-width: 26.5625em) {/*425px*/
         @mixin-content;
     }
 }
 
 @define-mixin atMedium {
-    @media (min-width: 40em) {
+    @media (min-width: 40em) {/*640px*/
         @mixin-content;
     }
 }
 
 @define-mixin atLarge {
-    @media (min-width: 64em) {
+    @media (min-width: 64em) {/*1024px*/
         @mixin-content;
     }
 }
-
-/* Small only
-@media screen and (max-width: 39.9375em) {}
-
-/* Medium and up
-@media screen and (min-width: 40em) {}
-
-/* Medium only
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
-
-/* Large and up
-@media screen and (min-width: 64em) {}
-
-/* Large only
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {} */
 
 @define-mixin font-stack-body {
     font-family: 'PT Sans', sans-serif;
@@ -65,7 +50,7 @@
 
 @define-mixin font-stack-title {
     font-family: 'Ubuntu Condensed', sans-serif;
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     font-weight: 700;
 
     @mixin atLarge {
@@ -81,10 +66,16 @@
 
 @define-mixin font-stack-subsection {
     font-family: 'Ubuntu Condensed', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 700;
 
     @mixin atLarge {
         font-size: 1.5rem;
     }
+}
+
+@define-mixin font-stack-footer {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
 }
