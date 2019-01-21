@@ -37,7 +37,7 @@
         @mixin atLarge {
             padding: .75rem 1rem 0 0;
             text-align: right;
-            line-height: .88;
+            line-height: .95;
         }
 
         &--no-b-margin-until-large {
