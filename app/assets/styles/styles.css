@@ -10,3 +10,15 @@
 @import "modules/_text-container";
 @import "modules/_team-member";
 @import "modules/_site-footer";
+
+
+.icon--sinfiniti {
+    background-image: url('../../assets/images/icons/sinfiniti.png');
+    width: 176px;
+    height: 50px;
+}
+.icon--portfolio {
+    background-image: url('../../assets/images/icons/portfolio.png');
+    width: 86px;
+    height: 75px;
+}
