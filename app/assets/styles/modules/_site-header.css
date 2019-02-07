@@ -9,7 +9,7 @@
     background-color: $white;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 
     @mixin atMedium {
         padding: 1rem 1.5rem .5rem;
@@ -31,6 +31,46 @@
 
     &__logo__graphic {
         text-indent: -9999px;
+    }
+
+    &__language-nav {
+        font-size: 1rem;
+        font-weight: bold;
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+            margin-left: 5px;
+
+            &::before {
+                content: "|";
+                color: $blue;
+            }
+        }
+
+        li:first-child::before {
+            content: "";
+        }
+
+        a {
+            display: inline-block;
+            margin-left: 8px;
+
+            &.is-current-link {
+                color: $red;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $red;
+            }
+        }
     }
 
     &__menu-icon {

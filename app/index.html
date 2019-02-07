@@ -21,7 +21,6 @@
 
 <body>
   <header class="site-header">
-    <!-- <div class="site-header__share-language">share + languages</div> -->
     <div class="site-header__logo">
       <div class="site-header__logo__graphic icon icon--sinfiniti">Sinfiniti</div>
     </div>
@@ -36,6 +35,11 @@
         <li><a href="#team" id="team-link">Il team</a></li>
         <li><a href="#portfolio" id="portfolio-link">Portfolio</a></li>
         <li><a href="#contatti" id="contatti-link">Contatti</a></li>
+      </nav>
+      <nav class="site-header__language-nav">
+      <ul>
+        <li><a href="" class="is-current-link">IT</a></li>
+        <li><a href="en/index.html">EN</a></li>
       </ul>
     </nav>
   </header>
@@ -117,6 +121,7 @@
               <li>Design dell’interazione per Applicazioni Web: dati, flussi, tipi di pagina</li>
               <li>Architettura dell’informazione per Siti Web: contenuti, navigazione , tipi di pagina</li>
               <li>Design dell’Interfaccia Utente digitale (multi device)</li>
+              <li>Architettura e specifiche del Software</li>
             </ul>
           </div>
         </div>
@@ -133,15 +138,6 @@
               <li>Programmazione dei Templates in HTML/CSS e JavaScript</li>
               <li>Prototipi in HTML e documentazione per l’implementazione</li>
             </ul>
-            <h4 class="page-section__subsection-title">Sviluppo delle componenti del sistema</h4>
-            <ul>
-              <li>Architettura e specifiche del Software</li>
-              <li>Database architecture: Transactional e Data warehouse</li>
-              <li>Middleware</li>
-              <li>Back-end development</li>
-              <li>System integration</li>
-              <li>API Definition and publishing</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -149,7 +145,7 @@
     <section id="team" class="page-section page-section--b-padding-large">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
-          <h1 class="page-section__title page-section__title--no-b-margin">Il team</h1>
+          <h1 class="page-section__title page-section__title--no-b-margin">Team di design</h1>
         </div>
       </div>
       <div class="row">
@@ -171,20 +167,22 @@
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
           <div class="text-container">
             <p class="no-b-margin text-center-at-small"><strong>Maurizio Gnot, dal 1995</strong><br>Project
-              management ,
+              management,
               User Experience design, Information Architecture</p>
           </div>
         </div>
       </div>
       <div class="row team-member">
         <div class="row__column row__column--large-8 row__column--h-align-end">
-          <div class="team-member__photo team-member__photo--blank">
+          <div class="team-member__photo">
+            <img class="lazyload" sizes="80px" data-srcset="assets/images/massimo-pavan.jpg 80w, assets/images/massimo-pavan-hi-dpi.jpg 160w"
+              alt="Massimo Pavan">
           </div>
         </div>
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
           <div class="text-container">
             <p class="no-b-margin text-center-at-small"><strong>Massimo Pavan, dal 2005</strong><br><span>Graphic
-                design, User Interface design (UI)</span></p>
+                design, User Interface design</span></p>
           </div>
         </div>
       </div>
@@ -198,7 +196,7 @@
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
           <div class="text-container">
             <p class="no-b-margin text-center-at-small"><strong>Gianluca Abbiati, dal 2000</strong><br>User
-              Interface design (UI), Sviluppo di siti con WordPress</p>
+              Interface design, User Interface development</p>
           </div>
         </div>
       </div>
@@ -211,8 +209,7 @@
         </div>
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
           <div class="text-container">
-            <p class="no-b-margin text-center-at-small"><strong>Roberto Panzeri, dal 1995</strong><br>Front-end
-              development (HTML/CSS/JS)</p>
+            <p class="no-b-margin text-center-at-small"><strong>Roberto Panzeri, dal 1995</strong><br>User Interface development</p>
           </div>
         </div>
       </div>
@@ -225,8 +222,7 @@
         </div>
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
           <div class="text-container">
-            <p class="no-b-margin text-center-at-small"><strong>Davide Giorgio, dal 1998</strong><br>Front-end
-              development (HTML/CSS/JS)</p>
+            <p class="no-b-margin text-center-at-small"><strong>Davide Giorgio, dal 1998</strong><br>User Interface development</p>
           </div>
         </div>
       </div>
@@ -240,8 +236,43 @@
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
           <div class="text-container">
             <p class="no-b-margin text-center-at-small"><strong>Lorenzo Brambille, dal 1996</strong><br>Software
-              architecture, Back-end development</p>
+              architecture</p>
           </div>
+        </div>
+      </div>
+      <div class="row team-member">
+        <div class="row__column row__column--large-8 row__column--h-align-end">
+          <div class="team-member__photo team-member__photo--blank">
+          </div>
+        </div>
+        <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
+          <div class="text-container">
+            <p class="no-b-margin text-center-at-small"><strong>Stefano Luzardi, dal 1998</strong><br>Software
+              architecture</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="partners" class="page-section page-section--b-padding-large">
+      <div class="row row--no-left-section-padding">
+        <div class="row__column--large-8 row__column--small-10">
+          <h1 class="page-section__title page-section__title--no-b-margin">Partner tecnologici</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter row__column--at-large-only">
+          <div class="text-container">
+            <p class="b-margin-small">Nel caso il cliente richieda, oltre al design anche l'implementazione, i nostri partner sono in grado di sviluppare lo strumento digitale.</p>
+              <h4 class="page-section__subsection-title">Sviluppo delle componenti del sistema</h4>
+              <ul>
+                <li>Database architecture: Transactional e Data warehouse</li>
+                <li>Middleware</li>
+                <li>Front-end development</li>
+                <li>Back-end development</li>
+                <li>System integration</li>
+                <li>API Definition and publishing</li>
+              </ul>
+            </div>
         </div>
       </div>
     </section>
@@ -316,7 +347,7 @@
         <div class="row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter">
           <span class="icon icon--sinfiniti"></span>
           <div class="text-container text-container--t-b-margin text-container--side-padding">
-            <p class="line-height-tall"><strong>Maurizio Gnot</strong><br>Via Enrico N&ouml;e, 25 - 2033 Milano - Italy<br><a
+            <p class="line-height-tall"><strong>Maurizio Gnot</strong><br>Via Enrico N&ouml;e, 25 - 20133 Milano - Italy<br><a
                 href="mailto:info@sinfiniti.com">info@sinfiniti.com</a><br>+39 335 562 9651</p>
           </div>
         </div>
