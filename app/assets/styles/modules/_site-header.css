@@ -1,19 +1,14 @@
 .site-header {
-    /*    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);*/
-    margin-left: auto;
-    margin-right: auto;
-    padding: .5rem 10px 0;
+    position: absolute;
+    top: 0;
+    z-index: 2;
     width: 100%;
+    padding: .5rem 10px 0;
     background-color: $white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
     @mixin atMedium {
+        /*position: fixed;*/
         padding: 1rem 1.5rem .5rem;
-        max-width: 960px;
     }
 
     &__logo {
@@ -34,8 +29,14 @@
     }
 
     &__language-nav {
-        font-size: 1rem;
+        font-size: .875rem;
         font-weight: bold;
+        margin-top: .4rem;
+
+        @mixin atMedium {
+            font-size: 1rem;
+            margin-top: 0;
+        }
 
         ul {
             margin: 0;
@@ -50,6 +51,7 @@
             &::before {
                 content: "|";
                 color: $blue;
+                vertical-align: text-top;
             }
         }
 
@@ -59,7 +61,11 @@
 
         a {
             display: inline-block;
-            margin-left: 8px;
+            margin-left: 5px;
+
+            @mixin atMedium {
+                margin-left: 8px;
+            }
 
             &.is-current-link {
                 color: $red;
@@ -73,13 +79,90 @@
         }
     }
 
+    &__primary-nav {
+        font-size: 1rem;
+        padding: 2rem 0;
+        position: absolute;
+        opacity: 0;
+        z-index: -10;
+        /* avoid to be clicked on accidentally */
+        width: 260px;
+        transform: translateX(100%);
+        transition: transform .3s ease-out;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            display: block;
+            margin: 0 1rem;
+            padding: .5rem 0;
+            border-bottom: 1px solid $lightGray;
+        }
+
+        @mixin atMedium {
+            position: relative;
+            opacity: 1;
+            z-index: 1;
+            transform: translateX(0);
+            padding: 0 0 4px;
+            width: auto;
+
+            li {
+                display: inline-block;
+                margin-left: 5px;
+
+                &::before {
+                    content: "|";
+                    color: $blue;
+                    vertical-align: text-top;
+                }
+            }
+
+            li:first-child::before {
+                content: "";
+            }
+
+            a {
+                display: inline-block;
+                margin: 0 0 0 8px;
+                padding: 0;
+                border-bottom: none;
+
+                &.is-current-link {
+                    color: $red;
+                    font-weight: bold;
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    color: $red;
+                }
+            }
+        }
+
+        &--is-visible {
+            top: 0;
+            right: 0;
+            opacity: 1;
+            z-index: 1;
+            transform: translateX(0);
+            transition: transform .3s ease-out;
+            background-color: rgba($white, 1);
+        }
+    }
+
     &__menu-icon {
         width: 20px;
         height: 19px;
         position: absolute;
         z-index: 10;
         /* above all menu items, so it can be clicked even when they are displayed */
-        top: 10px;
+        top: 14px;
         right: 10px;
 
         @mixin atMedium {
@@ -133,49 +216,6 @@
 
             &::after {
                 transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-            }
-        }
-    }
-
-    &__primary-nav {
-        padding-bottom: 4px;
-
-        ul {
-            margin: 0;
-            padding: 0;
-        }
-
-        li {
-            list-style: none;
-            display: inline-block;
-            margin-left: 5px;
-
-            &::before {
-                content: "|";
-                color: $blue;
-            }
-        }
-
-        li:first-child::before {
-            content: "";
-        }
-
-        a {
-            display: inline-block;
-            margin-left: 8px;
-
-            @mixin atMedium {
-
-                &.is-current-link {
-                    color: $red;
-                    font-weight: bold;
-                }
-
-                &:hover,
-                &:focus,
-                &:active {
-                    color: $red;
-                }
             }
         }
     }
