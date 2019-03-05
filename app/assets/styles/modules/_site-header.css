@@ -1,19 +1,13 @@
 .site-header {
-    /*    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);*/
-    margin-left: auto;
-    margin-right: auto;
-    padding: .5rem 10px 0;
+    position: fixed;
+    top: 0;
+    z-index: 2;
     width: 100%;
+    padding: .5rem 10px 0;
     background-color: $white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    @mixin atMedium {
+    @mixin atLarge {
         padding: 1rem 1.5rem .5rem;
-        max-width: 960px;
     }
 
     &__logo {
@@ -22,10 +16,12 @@
         transition: transform .3s ease-out;
         margin-bottom: -1rem;
 
-        @mixin atMedium {
+        @mixin atLarge {
             transform: scale(1);
             margin-bottom: 0;
+            float: left;
         }
+
     }
 
     &__logo__graphic {
@@ -33,8 +29,14 @@
     }
 
     &__language-nav {
-        font-size: 1rem;
+        font-size: .875rem;
         font-weight: bold;
+        margin-top: .4rem;
+
+        @mixin atLarge {
+            font-size: 1rem;
+            margin-top: 0;
+        }
 
         ul {
             margin: 0;
@@ -49,6 +51,7 @@
             &::before {
                 content: "|";
                 color: $blue;
+                vertical-align: text-top;
             }
         }
 
@@ -58,7 +61,11 @@
 
         a {
             display: inline-block;
-            margin-left: 8px;
+            margin-left: 5px;
+
+            @mixin atLarge {
+                margin-left: 8px;
+            }
 
             &.is-current-link {
                 color: $red;
@@ -69,6 +76,194 @@
             &:active {
                 color: $red;
             }
+        }
+    }
+
+    &__primary-nav {
+        position: fixed;
+        z-index: 15;
+        top: 0;
+        right: 0;
+        width: 260px;
+        height: 100%;
+        padding: .6rem 0 2rem;
+        transform: translateX(260px);
+        transition: transform .3s ease-out;
+        font-size: 1rem;
+        background-color: rgba($white, 1);
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            display: block;
+            margin: 0 1rem;
+            padding: .5rem 0;
+            border-bottom: 1px solid $lightGray;
+        }
+
+        @mixin atLarge {
+            position: relative;
+            transform: translateX(0);
+            padding: 0 0 4px;
+            width: auto;
+            height: auto;
+
+            li {
+                display: inline-block;
+                margin-left: 5px;
+
+                &::after {
+                    content: "|";
+                    color: $blue;
+                    vertical-align: text-top;
+                    margin-left: 8px;
+                }
+
+                &.site-header__primary-nav__logo {
+                    display: none;
+                }
+
+                &.site-header__primary-nav__hero {
+                    display: none;
+                }
+
+            }
+
+            li:last-child::after {
+                display: none;
+            }
+
+            a {
+                display: inline-block;
+                margin: 0 0 0;
+                padding: 0;
+                border-bottom: none;
+
+                &.is-current-link {
+                    color: $red;
+                    font-weight: bold;
+                }
+
+                &:hover,
+                &:focus {
+                    color: $red;
+                }
+            }
+        }
+
+        &--is-visible {
+            transform: translateX(0);
+        }
+
+        &__logo {
+
+            a {
+                transform: scale(.58);
+                transform-origin: 0 0;
+                text-indent: -9999px;
+                border: none;
+                display: inline-block;
+                margin-bottom: -1rem;
+            }
+        }
+
+        &__hero {
+            img {
+                width: 100%;
+            }
+
+        }
+    }
+
+    &__menu-icon {
+        width: 20px;
+        height: 19px;
+        position: absolute;
+        z-index: 20;
+        /* above all menu items, so it can be clicked even when they are displayed */
+        top: 14px;
+        right: 10px;
+
+        @mixin atLarge {
+            display: none;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: $gray;
+            transform-origin: 0 0;
+            transition: transform .3s ease-out;
+        }
+
+        &__middle {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: $gray;
+            transform-origin: 0 50%;
+            transition: all .3s ease-out;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 3px;
+            background-color: $gray;
+            transform-origin: 0 100%;
+            transition: transform .3s ease-out;
+        }
+
+        &--close-x {
+            &::before {
+                transform: rotate(45deg) scaleX(1.25);
+            }
+
+            .site-header__menu-icon__middle {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+
+            &::after {
+                transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+            }
+        }
+    }
+
+    &__menu-modal {
+        position: fixed;
+        z-index: 10;
+        background-color: rgba($black, .75);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.2);
+        transition: all .3s ease-out;
+
+        @mixin atLarge {
+            display: none;
+        }
+
+        &--is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
         }
     }
 }

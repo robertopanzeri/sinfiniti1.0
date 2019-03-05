@@ -1,5 +1,5 @@
 .site-hero {
-    margin: 0 auto;
+    margin: 44px auto 0;
     width: 100%;
     position: relative;
     background: url('../../assets/images/hero-background.jpg') top center no-repeat;
@@ -7,6 +7,7 @@
 
     &.lazyloaded {
         @mixin atLarge {
+            margin: 95px auto 0;
             background: url('../../assets/images/hero-large.jpg') top center no-repeat;
             background-size: cover;
             height: 525px;

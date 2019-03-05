@@ -12,8 +12,8 @@
     "lazysizes": "^4.1.4",
     "normalize.css": "^8.0.1",
     "picturefill": "^3.0.3",
-    "smooth-scroll": "^15.0.0",
-    "waypoints": "^4.0.1"
+    "waypoints": "^4.0.1",
+    "zenscroll": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",

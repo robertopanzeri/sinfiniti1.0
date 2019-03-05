@@ -1,5 +1,8 @@
 /* autoprefixer grid: off */
 .row {
+    max-width: 925px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: repeat(24, [col-start] 1fr);
     column-gap: 1%;
@@ -22,12 +25,37 @@
     /* autoprefixer grid: off */
     &__column {
 
+        &--small-5 {
+            grid-column-start: auto;
+            grid-column-end: span 5;
+        }
+
+        &--small-6 {
+            grid-column-start: auto;
+            grid-column-end: span 6;
+        }
+
+        &--small-9 {
+            grid-column-start: auto;
+            grid-column-end: span 9;
+        }
+
         &--small-10 {
             grid-column-start: auto;
             grid-column-end: span 10;
         }
 
         @mixin atLarge {
+
+            &--large-3 {
+                grid-column-start: auto;
+                grid-column-end: span 3;
+            }
+
+            &--large-5 {
+                grid-column-start: auto;
+                grid-column-end: span 5;
+            }
 
             &--large-8 {
                 grid-column-start: auto;
@@ -41,6 +69,18 @@
 
             &--large-offset-9 {
                 grid-column-start: col-start 9;
+            }
+
+            &--large-offset-19 {
+                grid-column-start: col-start 19;
+            }
+
+            &--large-offset-22 {
+                grid-column-start: col-start 22;
+            }
+
+            &--large-v-offset-2 {
+                grid-row-start: 2;
             }
 
             &--no-left-gutter {
@@ -68,6 +108,11 @@
         &--v-align-center {
             display: flex;
             align-items: center;
+        }
+
+        &--v-align-end {
+            display: flex;
+            align-items: flex-end;
         }
 
         &--text-center {
