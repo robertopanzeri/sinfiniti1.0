@@ -15,8 +15,9 @@ class StickyHeader {
         this.createPageSectionWaypoints();
 
         zenscroll.setup(null, 96);
-
-        this.refreshWaypoints();
+        
+        var that = this;
+        setTimeout(function () {that.refreshWaypoints();}, 500) ;
     }
 
     refreshWaypoints() { // When lazy loaded items are loaded, waypoints have to be recalculated
@@ -33,14 +34,14 @@ class StickyHeader {
                 handler: function (direction) {
                     if (direction == "down") {
                         var matchingHeaderLink = currentValue.getAttribute("data-matching-link");
-                        that.headerLinksArr.forEach(function (currentValue) {
-                            currentValue.classList.remove("is-current-link");
-                            currentValue.blur();
+                        that.headerLinksArr.forEach(function (currentLink) {
+                            currentLink.classList.remove("is-current-link");
+                            currentLink.blur();
                         });
                         document.getElementById(matchingHeaderLink).classList.add("is-current-link");
                     }
                 },
-                offset: -95
+                offset: 190
             });
             new Waypoint({
                 element: currentValue,
@@ -54,7 +55,7 @@ class StickyHeader {
                         document.getElementById(matchingHeaderLink).classList.add("is-current-link");
                     }
                 },
-                offset: -230
+                offset: 95
             });
         });
     }
