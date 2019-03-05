@@ -1,13 +1,12 @@
 .site-header {
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 2;
     width: 100%;
     padding: .5rem 10px 0;
     background-color: $white;
 
-    @mixin atMedium {
-        /*position: fixed;*/
+    @mixin atLarge {
         padding: 1rem 1.5rem .5rem;
     }
 
@@ -17,11 +16,12 @@
         transition: transform .3s ease-out;
         margin-bottom: -1rem;
 
-        @mixin atMedium {
+        @mixin atLarge {
             transform: scale(1);
             margin-bottom: 0;
             float: left;
         }
+
     }
 
     &__logo__graphic {
@@ -33,7 +33,7 @@
         font-weight: bold;
         margin-top: .4rem;
 
-        @mixin atMedium {
+        @mixin atLarge {
             font-size: 1rem;
             margin-top: 0;
         }
@@ -63,7 +63,7 @@
             display: inline-block;
             margin-left: 5px;
 
-            @mixin atMedium {
+            @mixin atLarge {
                 margin-left: 8px;
             }
 
@@ -80,12 +80,14 @@
     }
 
     &__primary-nav {
-        position: absolute;
+        position: fixed;
+        z-index: 15;
         top: 0;
         right: 0;
         width: 260px;
-        padding: 2rem 0;
-        transform: translateX(280px);
+        height: 100%;
+        padding: .6rem 0 2rem;
+        transform: translateX(260px);
         transition: transform .3s ease-out;
         font-size: 1rem;
         background-color: rgba($white, 1);
@@ -103,30 +105,41 @@
             border-bottom: 1px solid $lightGray;
         }
 
-        @mixin atMedium {
+        @mixin atLarge {
             position: relative;
             transform: translateX(0);
             padding: 0 0 4px;
             width: auto;
+            height: auto;
 
             li {
                 display: inline-block;
                 margin-left: 5px;
 
-                &::before {
+                &::after {
                     content: "|";
                     color: $blue;
                     vertical-align: text-top;
+                    margin-left: 8px;
                 }
+
+                &.site-header__primary-nav__logo {
+                    display: none;
+                }
+
+                &.site-header__primary-nav__hero {
+                    display: none;
+                }
+
             }
 
-            li:first-child::before {
-                content: "";
+            li:last-child::after {
+                display: none;
             }
 
             a {
                 display: inline-block;
-                margin: 0 0 0 8px;
+                margin: 0 0 0;
                 padding: 0;
                 border-bottom: none;
 
@@ -136,8 +149,7 @@
                 }
 
                 &:hover,
-                &:focus,
-                &:active {
+                &:focus {
                     color: $red;
                 }
             }
@@ -146,18 +158,37 @@
         &--is-visible {
             transform: translateX(0);
         }
+
+        &__logo {
+
+            a {
+                transform: scale(.58);
+                transform-origin: 0 0;
+                text-indent: -9999px;
+                border: none;
+                display: inline-block;
+                margin-bottom: -1rem;
+            }
+        }
+
+        &__hero {
+            img {
+                width: 100%;
+            }
+
+        }
     }
 
     &__menu-icon {
         width: 20px;
         height: 19px;
         position: absolute;
-        z-index: 10;
+        z-index: 20;
         /* above all menu items, so it can be clicked even when they are displayed */
         top: 14px;
         right: 10px;
 
-        @mixin atMedium {
+        @mixin atLarge {
             display: none;
         }
 
@@ -209,6 +240,30 @@
             &::after {
                 transform: rotate(-45deg) scaleX(1.25) translateY(1px);
             }
+        }
+    }
+
+    &__menu-modal {
+        position: fixed;
+        z-index: 10;
+        background-color: rgba($black, .75);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(1.2);
+        transition: all .3s ease-out;
+
+        @mixin atLarge {
+            display: none;
+        }
+
+        &--is-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
         }
     }
 }

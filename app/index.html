@@ -24,7 +24,7 @@
     <div class="row">
       <div class="row__column--large-5 row__column--small-9 row__column--large-v-offset-2">
         <div class="site-header__logo">
-          <div class="site-header__logo__graphic icon icon--sinfiniti">Sinfiniti</div>
+          <a href="" title="Sinfiniti - Home" class="site-header__logo__graphic icon icon--sinfiniti">Sinfiniti</a>
         </div>
       </div>
       <div class="row__column--large-3 row__column--small-6 row__column--large-offset-19 row__column--h-align-end">
@@ -41,10 +41,12 @@
       <div class="row__column--large-16 row__column--large-offset-9 row__column--h-align-end row__column--v-align-end">
         <nav class="site-header__primary-nav">
           <ul>
-            <li><a href="#home" id="home-link" class="is-current-link">Home</a></li>
-            <li><a href="#cosa" id="cosa-link">Cosa facciamo</a></li>
-            <li><a href="#fasi" id="fasi-link">Fasi di lavoro</a></li>
-            <li><a href="#team" id="team-link">Il team</a></li>
+            <li class="site-header__primary-nav__logo"><a href="#" title="Sinfiniti - Home" class="icon icon--sinfiniti">Home</a></li>
+            <li class="site-header__primary-nav__hero"><img src="assets/images/hero-mobile-menu.jpg" alt="Mouse that opens up a new way in a maze" class="site-hero__image"></li>
+            <li><a href="#cosa-facciamo" id="cosa-facciamo-link">Cosa</a></li>
+            <li><a href="#come-lavoriamo" id="come-lavoriamo-link">Come</a></li>
+            <li><a href="#team-design" id="team-design-link">Team</a></li>
+            <li><a href="#partners-tech" id="partners-tech-link">Partner</a></li>
             <li><a href="#portfolio" id="portfolio-link">Portfolio</a></li>
             <li><a href="#contatti" id="contatti-link">Contatti</a></li>
         </nav>
@@ -53,9 +55,10 @@
     <div class="site-header__menu-icon">
       <div class="site-header__menu-icon__middle"></div>
     </div>
+    <div class="site-header__menu-modal"></div>
   </header>
   <main>
-    <section id="design-strumenti-digitali" class="site-hero lazyload">
+    <section class="site-hero lazyload">
       <img src="assets/images/hero-small.jpg" alt="Topolino che si apre una nuova strada in un labirinto" class="site-hero__image">
       <div class="site-hero__text-content">
         <h1 class="site-hero__title"><span class="site-hero__title__highlight">Design</span><span class="site-hero__title__normal">di
@@ -64,7 +67,7 @@
           Design e del Re-design di strumenti digitali.</p>
       </div>
     </section>
-    <section id="cosa-facciamo" class="page-section page-section--no-t-border">
+    <section id="cosa-facciamo" class="page-section page-section--no-t-border" data-matching-link="cosa-facciamo-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
           <h2 class="page-section__title">Cosa facciamo</h2>
@@ -92,7 +95,7 @@
         </div>
       </div>
     </section>
-    <section id="fasi-lavoro" class="page-section">
+    <section id="come-lavoriamo" class="page-section" data-matching-link="come-lavoriamo-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
           <h2 class="page-section__title page-section__title--no-b-margin">Come lavoriamo</h2>
@@ -101,7 +104,9 @@
       <div class="row">
         <div class="row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter row__column--at-large-only">
           <div class="text-container">
-            <p class="b-margin-small">Il nostro metodo di lavoro si sviluppa in tre aree, svolte una dopo l'altra, a loro volta suddivise in attività. A seconda dell’esigenza del cliente possiamo  fornire il nostro servizio per tutte le aree, o per una sola, fino alla singola attività.</p>
+            <p class="b-margin-small">Il nostro metodo di lavoro si sviluppa in tre aree, svolte una dopo l'altra, a
+              loro volta suddivise in attività. A seconda dell’esigenza del cliente possiamo fornire il nostro servizio
+              per tutte le aree, o per una sola, fino alla singola attività.</p>
           </div>
         </div>
       </div>
@@ -153,7 +158,7 @@
         </div>
       </div>
     </section>
-    <section id="team" class="page-section page-section--b-padding-large">
+    <section id="team-design" class="page-section page-section--b-padding-large" data-matching-link="team-design-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
           <h1 class="page-section__title page-section__title--no-b-margin">Team di design</h1>
@@ -266,7 +271,7 @@
         </div>
       </div>
     </section>
-    <section id="partners" class="page-section page-section--b-padding-large">
+    <section id="partners-tech" class="page-section page-section--b-padding-large" data-matching-link="partners-tech-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
           <h1 class="page-section__title page-section__title--no-b-margin">Partner tecnologici</h1>
@@ -290,7 +295,7 @@
         </div>
       </div>
     </section>
-    <section id="portfolio" class="page-section">
+    <section id="portfolio" class="page-section" data-matching-link="portfolio-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
           <h2 class="page-section__title">Portfolio</h2>
@@ -351,7 +356,7 @@
         </div>
       </div>
     </section>
-    <section id="contatti" class="page-section">
+    <section id="contatti" class="page-section" data-matching-link="contatti-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
           <h2 class="page-section__title">Contatti</h2>

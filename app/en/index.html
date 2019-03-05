@@ -21,25 +21,54 @@
 
 <body>
   <header class="site-header">
-    <div class="site-header__logo">
-      <div class="site-header__logo__graphic icon icon--sinfiniti">Sinfiniti</div>
+    <div class="row">
+      <div class="row__column--large-5 row__column--small-9 row__column--large-v-offset-2">
+        <div class="site-header__logo">
+          <a href="" title="Sinfiniti - Home" class="site-header__logo__graphic icon icon--sinfiniti">Sinfiniti</a>
+        </div>
+      </div>
+      <div class="row__column--large-3 row__column--small-6 row__column--large-offset-19 row__column--h-align-end">
+        <!--<div class="site-header__share-widget">share</div>-->
+      </div>
+      <div class="row__column--large-3 row__column--small-5 row__column--large-offset-22 row__column--h-align-end">
+        <nav class="site-header__language-nav">
+          <ul>
+            <li><a href="../index.html">IT</a></li>
+            <li><a href="" class="is-current-link">EN</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="row__column--large-16 row__column--large-offset-9 row__column--h-align-end row__column--v-align-end">
+        <nav class="site-header__primary-nav">
+          <ul>
+            <li class="site-header__primary-nav__logo"><a href="#" title="Sinfiniti - Home" class="icon icon--sinfiniti">Home</a></li>
+            <li class="site-header__primary-nav__hero"><img src="../assets/images/hero-mobile-menu.jpg" alt="Mouse that opens up a new way in a maze"
+                class="site-hero__image"></li>
+            <li><a href="#cosa-facciamo" id="cosa-facciamo-link">What</a></li>
+            <li><a href="#come-lavoriamo" id="come-lavoriamo-link">How</a></li>
+            <li><a href="#team-design" id="team-design-link">Team</a></li>
+            <li><a href="#partners-tech" id="partners-tech-link">Partners</a></li>
+            <li><a href="#portfolio" id="portfolio-link">Clients</a></li>
+            <li><a href="#contatti" id="contatti-link">Contacts</a></li>
+        </nav>
+      </div>
     </div>
-    <nav class="site-header__language-nav">
-      <ul>
-        <li><a href="../index.html">IT</a></li>
-        <li><a href="" class="is-current-link">EN</a></li>
-      </ul>
-    </nav>
+    <div class="site-header__menu-icon">
+      <div class="site-header__menu-icon__middle"></div>
+    </div>
+    <div class="site-header__menu-modal"></div>
   </header>
   <main>
-    <section id="design-strumenti-digitali" class="site-hero lazyload">
+    <section class="site-hero lazyload">
       <img src="../assets/images/hero-small.jpg" alt="Mouse that opens up a new way in a maze" class="site-hero__image">
       <div class="site-hero__text-content">
-        <h1 class="site-hero__title"><span class="site-hero__title__highlight">Design</span><span class="site-hero__title__normal">of digital tools for the Web</span></h1>
-        <p class="site-hero__description">We are a group of professionals with a 20-year track record in digital tool Design and Re-design.</p>
+        <h1 class="site-hero__title"><span class="site-hero__title__highlight">Design</span><span class="site-hero__title__normal">of
+            digital tools for the Web</span></h1>
+        <p class="site-hero__description">We are a group of professionals with a 20-year track record in digital tool
+          Design and Re-design.</p>
       </div>
     </section>
-    <section id="cosa-facciamo" class="page-section page-section--no-t-border">
+    <section id="cosa-facciamo" class="page-section page-section--no-t-border" data-matching-link="cosa-facciamo-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
           <h2 class="page-section__title">What we do</h2>
@@ -53,14 +82,19 @@
         </div>
         <div class="row__column row__column--large-16 row__column--no-left-gutter">
           <div class="text-container text-container--side-padding">
-            <p><strong class="text-title">Design</strong> digital tools in close collaboration with our clients to serve the needs of their end users, ensuring seamless integration with existing internal and external architectures and providing additional development as needed.</p>
-            <p><strong class="text-title">Deliver</strong> to developers: project documentation, HTML/CSS user interface and software design specifications.   We can also provide full implementation of digital solutions in collaboration with our technical partners.</p>
-            <p><strong class="text-title">Ensure</strong> the support necessary during the production and/or quality control phases.</p>
+            <p><strong class="text-title">Design</strong> digital tools in close collaboration with our clients to
+              serve the needs of their end users, ensuring seamless integration with existing internal and external
+              architectures and providing additional development as needed.</p>
+            <p><strong class="text-title">Deliver</strong> to developers: project documentation, HTML/CSS user
+              interface and software design specifications. We can also provide full implementation of digital
+              solutions in collaboration with our technical partners.</p>
+            <p><strong class="text-title">Ensure</strong> the support necessary during the production and/or quality
+              control phases.</p>
           </div>
         </div>
       </div>
     </section>
-    <section id="fasi-lavoro" class="page-section">
+    <section id="come-lavoriamo" class="page-section" data-matching-link="come-lavoriamo-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
           <h2 class="page-section__title page-section__title--no-b-margin">How we work</h2>
@@ -69,7 +103,10 @@
       <div class="row">
         <div class="row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter row__column--at-large-only">
           <div class="text-container">
-            <p class="b-margin-small">Our working methodology unfolds in three areas developed in sequence:   Strategy, Design and Implementation.  Each one of these has a clear list of dedicated tasks.  Based on client needs we can provide our service for all three areas, for just one area, or we can focus on a single activity within one area.   The objective is to provide a tailor-made solution to your needs.</p>
+            <p class="b-margin-small">Our working methodology unfolds in three areas developed in sequence: Strategy,
+              Design and Implementation. Each one of these has a clear list of dedicated tasks. Based on client needs
+              we can provide our service for all three areas, for just one area, or we can focus on a single activity
+              within one area. The objective is to provide a tailor-made solution to your needs.</p>
           </div>
         </div>
       </div>
@@ -121,7 +158,7 @@
         </div>
       </div>
     </section>
-    <section id="team" class="page-section page-section--b-padding-large">
+    <section id="team-design" class="page-section page-section--b-padding-large" data-matching-link="team-design-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
           <h1 class="page-section__title page-section__title--no-b-margin">Design team</h1>
@@ -130,7 +167,9 @@
       <div class="row">
         <div class="row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter row__column--at-large-only">
           <div class="text-container">
-            <p class="b-margin-small">The diverse backgrounds and expertise of our team members allow us to assign <strong class="text-highlight">specific consultants to single tasks</strong> or to create <strong class="text-highlight">lean and efficient task forces</strong> based on the complexity of the project at hand.</p>
+            <p class="b-margin-small">The diverse backgrounds and expertise of our team members allow us to assign
+              <strong class="text-highlight">specific consultants to single tasks</strong> or to create <strong class="text-highlight">lean
+                and efficient task forces</strong> based on the complexity of the project at hand.</p>
           </div>
         </div>
       </div>
@@ -233,7 +272,7 @@
         </div>
       </div>
     </section>
-    <section id="partners" class="page-section page-section--b-padding-large">
+    <section id="partners-tech" class="page-section page-section--b-padding-large" data-matching-link="partners-tech-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
           <h1 class="page-section__title page-section__title--no-b-margin">Technical partners</h1>
@@ -242,7 +281,8 @@
       <div class="row">
         <div class="row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter">
           <div class="text-container">
-            <p class="b-margin-small">In addition to providing the above-mentioned design services, we can coordinate implementation together with trusted partners.</p>
+            <p class="b-margin-small">In addition to providing the above-mentioned design services, we can coordinate
+              implementation together with trusted partners.</p>
             <h4 class="page-section__subsection-title">System components development</h4>
             <ul>
               <li>Database architecture: transactional and data warehouse</li>
@@ -256,7 +296,7 @@
         </div>
       </div>
     </section>
-    <section id="portfolio" class="page-section">
+    <section id="portfolio" class="page-section" data-matching-link="portfolio-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
           <h2 class="page-section__title">We worked for</h2>
@@ -317,7 +357,7 @@
         </div>
       </div>
     </section>
-    <section id="contatti" class="page-section">
+    <section id="contatti" class="page-section" data-matching-link="contatti-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column--large-8 row__column--small-10">
           <h2 class="page-section__title">Contacts</h2>
@@ -327,8 +367,8 @@
         <div class="row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter">
           <span class="icon icon--sinfiniti"></span>
           <div class="text-container text-container--t-b-margin text-container--side-padding">
-            <p class="line-height-tall"><strong>Maurizio Gnot</strong><br>Via Enrico N&ouml;e, 25 - 20133 Milano - Italy<br><a
-                href="mailto:info@sinfiniti.com">info@sinfiniti.com</a><br>+39 335 562 9651</p>
+            <p class="line-height-tall"><strong>Maurizio Gnot</strong><br>Via Enrico N&ouml;e, 25 - 20133 Milano -
+              Italy<br><a href="mailto:info@sinfiniti.com">info@sinfiniti.com</a><br>+39 335 562 9651</p>
           </div>
         </div>
       </div>
