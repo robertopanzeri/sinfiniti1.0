@@ -72,6 +72,10 @@
             margin-bottom: 0;
         }
 
+        &.t-margin {
+            margin-top: .5rem;
+        }
+
         & li {
             list-style: none;
             position: relative;
@@ -83,6 +87,17 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+            }
+        }
+
+        &.text-small li {
+         font-size: .8rem;   
+        }
+
+        &.bullet li {
+
+            &::before {
+                content: "\2022";
             }
         }
 
