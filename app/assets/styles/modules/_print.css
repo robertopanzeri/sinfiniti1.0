@@ -1,0 +1,63 @@
+@media print {
+
+    * {
+        color: #333;
+    }
+
+    .site-header {
+        position: static;
+    }
+
+    .site-header__logo {
+        transform: scale(1);
+    }
+
+    .site-header__logo__graphic {
+        @supports (position:-ms-page) {
+            text-indent: 0;
+        }
+        font-size: 4rem;
+    }
+
+    .icon--sinfiniti {
+        -webkit-print-color-adjust: exact;
+        color-adjust: exact;
+    }
+
+    .no-print,
+    .site-header__language-nav,
+    .site-header__primary-nav,
+    .page-section__headline {
+        display: none;
+    }
+
+    .site-hero__image {
+        visibility: hidden;
+    }
+
+    .site-hero__title,
+    .site-hero__description,
+    .page-section__title {
+        text-shadow: none;
+        color: #333;
+    }
+
+    .page-section {
+        page-break-inside: avoid;
+        break-inside: avoid-page;
+        border: 2px solid #ccc;
+    }
+
+    .page-section--no-t-border {
+        border-top: 2px solid #ccc;
+    }
+
+    .page-section__title {
+        margin-top: 1rem;
+    }
+
+    .team-member {
+        margin-bottom: .6rem;
+    }
+
+}
