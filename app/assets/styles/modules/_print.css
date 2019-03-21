@@ -43,8 +43,8 @@
     }
 
     .page-section {
-        page-break-inside: avoid;
         break-inside: avoid-page;
+        page-break-inside: avoid;
         border: 2px solid #ccc;
     }
 
