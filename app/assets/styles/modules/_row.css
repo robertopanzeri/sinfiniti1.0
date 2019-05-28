@@ -24,6 +24,7 @@
 
     /* autoprefixer grid: off */
     &__column {
+        overflow: hidden;
 
         &--small-5 {
             grid-column-start: auto;
@@ -60,6 +61,11 @@
             &--large-8 {
                 grid-column-start: auto;
                 grid-column-end: span 8;
+            }
+
+            &--large-12 {
+                grid-column-start: auto;
+                grid-column-end: span 12;
             }
 
             &--large-16 {

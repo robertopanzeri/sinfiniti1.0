@@ -4,7 +4,7 @@ imagemin = require('gulp-imagemin'),
 usemin = require('gulp-usemin'),
 rev = require('gulp-rev'),
 cssnano = require('gulp-cssnano'),
-uglify = require('gulp-uglify'),
+terser = require('gulp-terser'),
 del = require('del'),
 browserSync = require('browser-sync').create();
 
@@ -49,7 +49,7 @@ gulp.task('usemin', function () {
     return gulp.src('./app/**/*.html')
     .pipe(usemin({
         css: [function() {return rev()}, function() {return cssnano()}],
-        js: [function() {return rev()}, function() {return uglify()}]
+        js: [function() {return rev()}, function() {return terser()}]
     }))
     .pipe(gulp.dest('./docs'));
 });
