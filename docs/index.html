@@ -11,8 +11,12 @@
   <link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="assets/styles/styles-406ecff1c2.css"/>
-  <script src="assets/scripts/vendor-e8a79a89c1.js"></script>
+  <!-- DEV path -->
+  <!-- <link href="temp/styles/styles.css" rel="stylesheet" type="text/css">
+  <script src="temp/scripts/vendor.js"></script> -->
+  <!-- BUILD path -->
+  <link href="assets/styles/styles.css" rel="stylesheet" type="text/css">
+  <script src="assets/scripts/vendor.js"></script>
 </head>
 
 <body>
@@ -37,10 +41,8 @@
       <div class="row__column row__column--large-16 row__column--large-offset-9 row__column--h-align-end row__column--v-align-end">
         <nav class="site-header__primary-nav">
           <ul>
-            <li class="site-header__primary-nav__logo"><a href="#" title="Sinfiniti - Home"
-                class="icon icon--sinfiniti">Home</a></li>
-            <li class="site-header__primary-nav__hero"><img src="assets/images/hero-mobile-menu.jpg"
-                alt="Mouse that opens up a new way in a maze" class="site-hero__image"></li>
+            <li class="site-header__primary-nav__logo"><a href="#" title="Sinfiniti - Home" class="icon icon--sinfiniti">Home</a></li>
+            <li class="site-header__primary-nav__hero"><img src="assets/images/hero-mobile-menu.jpg" alt="Mouse that opens up a new way in a maze" class="site-hero__image"></li>
             <li><a href="#cosa-facciamo" id="cosa-facciamo-link">Cosa</a></li>
             <li><a href="#come-lavoriamo" id="come-lavoriamo-link">Come</a></li>
             <li><a href="#team-design" id="team-design-link">Team</a></li>
@@ -57,15 +59,11 @@
   </header>
   <main>
     <section class="site-hero lazyload">
-      <img src="assets/images/hero-small.jpg" alt="Topolino che si apre una nuova strada in un labirinto"
-        class="site-hero__image">
+      <img src="assets/images/hero-small.jpg" alt="Topolino che si apre una nuova strada in un labirinto" class="site-hero__image">
       <div class="site-hero__text-content">
-        <h1 class="site-hero__title"><span class="site-hero__title__highlight">Design</span><span
-            class="site-hero__title__normal">di
+        <h1 class="site-hero__title"><span class="site-hero__title__highlight">Design</span><span class="site-hero__title__normal">di
             strumenti digitali per il web</span></h1>
-        <p class="site-hero__description">Siamo un gruppo di professionisti e consulenti, da più di vent’anni ci
-          occupiamo del
-          Design e del Re-design di strumenti digitali.</p>
+        <p class="site-hero__description">Siamo un gruppo di professionisti e consulenti, da più di vent’anni ci occupiamo del Design e del <span class="no-word-break">Re-design</span> di strumenti digitali.</p>
       </div>
     </section>
     <section id="cosa-facciamo" class="page-section page-section--no-t-border" data-matching-link="cosa-facciamo-link">
@@ -76,22 +74,17 @@
       </div>
       <div class="row">
         <div class="row__column row__column row__column--large-8 row__column--at-large-only">
-          <h3 class="page-section__headline">Web Site <span class="page-section__headline--small">su larga scala</span>
+          <h3 class="page-section__headline">Web Sites
+            <!--<span class="page-section__headline--small">su larga scala</span>-->
           </h3>
-          <h3 class="page-section__headline">Web App</h3>
-          <h3 class="page-section__headline">REST API</h3>
+          <h3 class="page-section__headline">Web Apps</h3>
+          <h3 class="page-section__headline">RESTful APIs</h3>
         </div>
         <div class="row__column row__column--large-16 row__column--no-left-gutter">
           <div class="text-container text-container--side-padding">
-            <p><strong class="text-title">Progettiamo</strong> lo strumento digitale sui bisogni dell’utente finale ed
-              in stretta collaborazione con il cliente, considerando eventuali integrazioni con sistemi interni ed
-              esterni e relativo sviluppo.</p>
-            <p><strong class="text-title">Consegniamo</strong> ai programmatori, <strong>a garanzia e protezione del
-                cliente</strong>, la documentazione di progetto, l'interfaccia utente in
-              HTML/CSS
-              e il disegno del software necessari per la fase di implementazione. In alternativa, possiamo anche
-              implementare lo strumento digitale in
-              collaborazione con i nostri partner tecnologici.</p>
+            <p><strong class="text-title">Progettiamo</strong> lo strumento digitale sui bisogni dell’utente finale ed in stretta collaborazione con il cliente, considerando eventuali integrazioni con sistemi interni ed esterni e relativo sviluppo.</p>
+            <p><strong class="text-title">Consegniamo</strong> ai programmatori, <strong>a garanzia e protezione del cliente</strong>, la documentazione di progetto, l'interfaccia utente in HTML/CSS e il disegno del software necessari per la fase di implementazione.
+              <br>In alternativa, possiamo anche implementare lo strumento digitale in collaborazione con i nostri partner tecnologici.</p>
             <p><strong class="text-title">Assicuriamo</strong> <strong>la difesa del progetto e il controllo di
                 qualità</strong> durante l'implementazione. Stiamo dalla parte del cliente, gestendo e facilitando la
               relazione con l'azienda di sviluppo e controllando che l'implementazione sia in linea con quanto stabilito
@@ -107,8 +100,7 @@
         </div>
       </div>
       <div class="row">
-        <div
-          class="row__column row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter row__column--at-large-only">
+        <div class="row__column row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter row__column--at-large-only">
           <div class="text-container">
             <p class="b-margin-small">Il nostro metodo di lavoro si sviluppa in tre aree, svolte una dopo l'altra, a
               loro volta suddivise in attività. A seconda dell’esigenza del cliente possiamo fornire il nostro servizio
@@ -142,6 +134,7 @@
             <ul>
               <li>Design dell’interazione per Applicazioni Web: dati, flussi, tipi di pagina</li>
               <li>Architettura dell’informazione per Siti Web: contenuti, navigazione , tipi di pagina</li>
+              <li>Design e redazione dei contenuti</li>
               <li>Design dell’interfaccia utente digitale (multi device) e relativa visual identity</li>
               <li>Test di usabilità</li>
               <li>Architettura e specifiche del software</li>
@@ -165,16 +158,31 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="row__column row__column--large-8">
+          <h3 class="page-section__headline">Crescita</h3>
+        </div>
+        <div class="row__column row__column--large-16 row__column--no-left-gutter">
+          <div class="text-container">
+            <h4 class="page-section__subsection-title">Manutenzione ed espansione</h4>
+            <ul>
+              <li>Supporto per la manutenzione dello strumento digitale</li>
+              <li>Design e implementazione di nuovi requisiti</li>
+              <li>Strategie e campagne di social advertsing</li>
+              <li>Social media management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
     <section id="team-design" class="page-section page-section--b-padding-large" data-matching-link="team-design-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column row__column--large-8 row__column--small-10">
-          <h1 class="page-section__title page-section__title--no-b-margin">Team di design</h1>
+          <h1 class="page-section__title page-section__title--no-b-margin">Team Sinfiniti</h1>
         </div>
       </div>
       <div class="row">
-        <div
-          class="row__column row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter row__column--at-large-only">
+        <div class="row__column row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter row__column--at-large-only">
           <div class="text-container">
             <p class="b-margin-small">Il nostro è un gruppo di lavoro multidisciplinare composto da persone con
               qualifiche diverse che possono <strong class="text-highlight">operare singolarmente o in gruppo</strong>
@@ -182,43 +190,70 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="row__column row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter row__column--at-large-only">
+          <h4 class="page-section__subsection-title">Analisi, Concept, UX, UI e Contenuti</h4>
+        </div>
+      </div>
       <div class="row team-member">
         <div class="row__column row__column--large-8 row__column--h-align-end">
           <div class="team-member__photo">
-            <img class="lazyload" sizes="80px"
-              data-srcset="assets/images/maurizio-gnot.jpg 80w, assets/images/maurizio-gnot-hi-dpi.jpg 160w"
-              alt="Maurizio Gnot">
+            <img class="lazyload" sizes="80px" data-srcset="assets/images/maurizio-gnot.jpg 80w, assets/images/maurizio-gnot-hi-dpi.jpg 160w" alt="Maurizio Gnot">
           </div>
         </div>
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
           <div class="text-container">
             <p class="no-b-margin text-center-at-small"><strong>Maurizio Gnot, dal 1995</strong><br>Project
               management,
-              User Experience design, Information Architecture</p>
+              User Experience design, Information Architecture, User Interface design<br><a href="assets/docs/cv-sinfiniti-maurizio-gnot-2019-complete.pdf" target="_blank">Scarica CV</a></p>
           </div>
         </div>
       </div>
       <div class="row team-member">
         <div class="row__column row__column--large-8 row__column--h-align-end">
           <div class="team-member__photo">
-            <img class="lazyload" sizes="80px"
-              data-srcset="assets/images/massimo-pavan.jpg 80w, assets/images/massimo-pavan-hi-dpi.jpg 160w"
-              alt="Massimo Pavan">
+            <img class="lazyload" sizes="80px" data-srcset="assets/images/simonetta-consorti.jpg 80w, assets/images/simonetta-consorti-hi-dpi.jpg 160w" alt="Simonetta Consorti">
           </div>
         </div>
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
           <div class="text-container">
-            <p class="no-b-margin text-center-at-small"><strong>Massimo Pavan, dal 2005</strong><br><span>Graphic
-                design, User Interface design</span></p>
+            <p class="no-b-margin text-center-at-small"><strong>Simonetta Consorti, dal 2001</strong><br>Project Management, Information Architecture, UX Research, Usability Testing<br><a href="assets/docs/cv-sinfiniti-simonetta-consorti-2019.pdf" target="_blank">Scarica CV</a></p>
           </div>
         </div>
       </div>
       <div class="row team-member">
         <div class="row__column row__column--large-8 row__column--h-align-end">
           <div class="team-member__photo">
-            <img class="lazyload" sizes="80px"
-              data-srcset="assets/images/gianluca-abbiati.jpg 80w, assets/images/gianluca-abbiati-hi-dpi.jpg 160w"
-              alt="Gianluca Abbiati">
+            <img class="lazyload" sizes="80px" data-srcset="assets/images/massimo-pavan.jpg 80w, assets/images/massimo-pavan-hi-dpi.jpg 160w" alt="Massimo Pavan">
+          </div>
+        </div>
+        <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
+          <div class="text-container">
+            <p class="no-b-margin text-center-at-small"><strong>Massimo Pavan, dal 2005</strong><br><span>User Interface design, Graphic design</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="row team-member">
+        <div class="row__column row__column--large-8 row__column--h-align-end">
+          <div class="team-member__photo">
+            <img class="lazyload" sizes="80px" data-srcset="assets/images/francesca-lombardi.jpg 80w, assets/images/francesca-lombardi-hi-dpi.jpg 160w" alt="Francesca Lombardi">
+          </div>
+        </div>
+        <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
+          <div class="text-container">
+            <p class="no-b-margin text-center-at-small"><strong>Francesca Lombardi, dal 2004</strong><br><span>Writing, Storytelling, Social media management, Ufficio stampa</span><br><a href="assets/docs/cv-francesca-lombardi.pdf" target="_blank">Scarica CV</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row__column row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter row__column--at-large-only">
+          <h4 class="page-section__subsection-title">Front-end</h4>
+        </div>
+      </div>
+      <div class="row team-member">
+        <div class="row__column row__column--large-8 row__column--h-align-end">
+          <div class="team-member__photo">
+            <img class="lazyload" sizes="80px" data-srcset="assets/images/gianluca-abbiati.jpg 80w, assets/images/gianluca-abbiati-hi-dpi.jpg 160w" alt="Gianluca Abbiati">
           </div>
         </div>
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
@@ -231,24 +266,20 @@
       <div class="row team-member">
         <div class="row__column row__column--large-8 row__column--h-align-end">
           <div class="team-member__photo">
-            <img class="lazyload" sizes="80px"
-              data-srcset="assets/images/roberto-panzeri.jpg 80w, assets/images/roberto-panzeri-hi-dpi.jpg 160w"
-              alt="Roberto Panzeri">
+            <img class="lazyload" sizes="80px" data-srcset="assets/images/roberto-panzeri.jpg 80w, assets/images/roberto-panzeri-hi-dpi.jpg 160w" alt="Roberto Panzeri">
           </div>
         </div>
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
           <div class="text-container">
             <p class="no-b-margin text-center-at-small"><strong>Roberto Panzeri, dal 1995</strong><br>User Interface
-              development</p>
+              development<br><a href="assets/docs/cv-sinfiniti-roberto-panzeri.pdf" target="_blank">Scarica CV</a></p>
           </div>
         </div>
       </div>
       <div class="row team-member">
         <div class="row__column row__column--large-8 row__column--h-align-end">
           <div class="team-member__photo">
-            <img class="lazyload" sizes="80px"
-              data-srcset="assets/images/davide-giorgio.jpg 80w, assets/images/davide-giorgio-hi-dpi.jpg 160w"
-              alt="Davide Giorgio">
+            <img class="lazyload" sizes="80px" data-srcset="assets/images/davide-giorgio.jpg 80w, assets/images/davide-giorgio-hi-dpi.jpg 160w" alt="Davide Giorgio">
           </div>
         </div>
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
@@ -258,27 +289,28 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="row__column row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter row__column--at-large-only">
+          <h4 class="page-section__subsection-title">Back-end</h4>
+        </div>
+      </div>
       <div class="row team-member">
         <div class="row__column row__column--large-8 row__column--h-align-end">
           <div class="team-member__photo">
-            <img class="lazyload" sizes="80px"
-              data-srcset="assets/images/lorenzo-brambille.jpg 80w, assets/images/lorenzo-brambille-hi-dpi.jpg 160w"
-              alt="Lorenzo Brambille">
+            <img class="lazyload" sizes="80px" data-srcset="assets/images/lorenzo-brambille.jpg 80w, assets/images/lorenzo-brambille-hi-dpi.jpg 160w" alt="Lorenzo Brambille">
           </div>
         </div>
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
           <div class="text-container">
             <p class="no-b-margin text-center-at-small"><strong>Lorenzo Brambille, dal 1996</strong><br>Software
-              architecture</p>
+              architecture<br><a href="assets/docs/cv-sinfiniti-lorenzo-brambille.pdf" target="_blank">Scarica CV</a></p>
           </div>
         </div>
       </div>
       <div class="row team-member">
         <div class="row__column row__column--large-8 row__column--h-align-end">
           <div class="team-member__photo">
-            <img class="lazyload" sizes="80px"
-              data-srcset="assets/images/stefano-luzardi.jpg 80w, assets/images/stefano-luzardi-hi-dpi.jpg 160w"
-              alt="Stefano Luzardi">
+            <img class="lazyload" sizes="80px" data-srcset="assets/images/stefano-luzardi.jpg 80w, assets/images/stefano-luzardi-hi-dpi.jpg 160w" alt="Stefano Luzardi">
           </div>
         </div>
         <div class="row__column row__column--large-16 row__column--no-left-gutter row__column--v-align-center">
@@ -289,8 +321,7 @@
         </div>
       </div>
     </section>
-    <section id="partners-tech" class="page-section page-section--b-padding-large"
-      data-matching-link="partners-tech-link">
+    <section id="partners-tech" class="page-section page-section--b-padding-large" data-matching-link="partners-tech-link">
       <div class="row row--no-left-section-padding">
         <div class="row__column row__column--large-8 row__column--small-10">
           <h1 class="page-section__title page-section__title--no-b-margin">Partner tecnologici</h1>
@@ -324,29 +355,11 @@
         <div class="row__column row__column--large-8 row__column--text-center row__column--t-padding no-print">
           <span class="icon icon--portfolio"></span>
           <div class="text-container text-container--t-b-margin">
-            <a href="assets/docs/Sinfiniti_Presentation.pdf" title="Portfolio Sinfiniti" target="_blank"
-              class="text-large"><strong>Scarica
+            <a href="assets/docs/Sinfiniti_Presentation.pdf" title="Portfolio Sinfiniti" target="_blank" class="text-large"><strong>Scarica
                 il portfolio in PDF</strong></a>
           </div>
         </div>
         <div class="row__column row__column--large-16 row__column--large-offset-9 row__column--no-left-gutter">
-            <div class="swiper-container swiper-container--b-margin">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="assets/images/slider-image.png" alt=""><p class="swiper-slide__text">Testo relativo alla slide</p></div>
-                  <div class="swiper-slide">Slide 2</div>
-                  <div class="swiper-slide">Slide 3</div>
-                  <div class="swiper-slide">Slide 4</div>
-                  <div class="swiper-slide">Slide 5</div>
-                  <div class="swiper-slide">Slide 6</div>
-                  <div class="swiper-slide">Slide 7</div>
-                  <div class="swiper-slide">Slide 8</div>
-                  <div class="swiper-slide">Slide 9</div>
-                  <div class="swiper-slide">Slide 10</div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
           <div class="row">
             <div class="row__column row__column--large-12">
               <div class="text-container">
@@ -416,7 +429,7 @@
   </main>
   <footer class="site-footer">Sinfiniti - <a href="mailto:info@sinfiniti.com">info@sinfiniti.com</a> - p.iva
     08404600150</footer>
-  <script src="assets/scripts/app-1be2db59fb.js"></script>
+  <script src="assets/scripts/app-1a7cde5b1b.js"></script>
 </body>
 
 </html>
