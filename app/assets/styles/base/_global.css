@@ -18,3 +18,7 @@ a {
     color: $blue;
     text-decoration: none;
 }
+
+.no-word-break {
+  word-break: keep-all;
+}
